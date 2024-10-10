@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário Condicional</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Formulário Condicional</h1>
+        </header>
+
+        <section id="question-section">
+            <div id="profession" class="card">
+                <h2>Qual é a sua profissão ?</h2>
+                <button class="answer-button" onclick="revelaProximaPergunta('web')">Web</button>
+                <button class="answer-button" onclick="revelaProximaPergunta('mobile')">Mobile</button>
+            </div>
+                           
+            <div id="area" class="card">
+                <h3>Qual área deseja atuar ?</h3>
+                <button class="answer-button"onclick="revelaVantagens('back')">Back-end</button>
+                <button class="answer-button"onclick="revelaVantagens('front')">Front-end</button>
+            </div>
+
+            <div id="front-end" class="card">
+                <h4>Qual vantagem você deseja aprender em Front-end ?</h4>
+                <button class="answer-button" onclick="revelaMelhoresLinguagens('libraries')">Varias bibliotecas</button>
+                <button class="answer-button" onclick="revelaMelhoresLinguagens('understanding')">Fácil compreensão</button>
+                <button class="answer-button" onclick="revelaMelhoresLinguagens('community')">Maior comunidade</button>
+            </div>
+
+            <div id="back-end" class="card">
+                <h4>Qual vantagem você deseja aprender em Back-end ?</h4>
+                <button class="answer-button" onclick="revelaMelhoresLinguagens('intuitive')">Programação intuitiva</button>
+                <button class="answer-button" onclick="revelaMelhoresLinguagens('speed')">Rapidez</button>
+                <button class="answer-button" onclick="revelaMelhoresLinguagens('integration')">Fácil integração</button>
+            </div>
+
+            <div id="answers-container">
+                <ul id="list-answers"></ul>
+            </div>
+        </section>
+
+        <button id="restart" onclick="restartPage()" aria-label="Botão Restart"><img src="components/icons8-restart.svg" alt=""></button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
